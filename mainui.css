@@ -1,0 +1,173 @@
+/************************************ FONTS ************************************/
+@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);/* 아이콘 폰트를 위해 임포트 */
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+/************************************* END FONTS *************************************/
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+	background: #1f253d;
+}
+
+ul {
+	list-style-type: none; /* 리스트의 점이나 숫자를 제거*/
+	margin: 0;
+	padding-left: 0;
+}
+
+h1 {
+	font-size: 23px;
+}
+
+h2 {
+	font-size: 17px;
+}
+
+p {
+	font-size: 15px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+}
+	a:hover {
+		text-decoration: underline;
+	}
+
+h1, h2, p, a, span{
+	color: #fff;
+}
+	.scnd-font-color {
+		color: #9099b7;
+	}
+
+.horizontal-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none; /* 리스트의 점이나 숫자를 제거*/
+}
+	.horizontal-list li {
+		float: left; /*리스트 원소를 왼쪽부터 차곡차곡 나열하기 위해*/
+	}
+
+.clear {
+	clear: both;
+}
+
+.icon {
+	font-size: 25px;
+}
+
+.profile-picture {
+	border-radius: 100%;
+	overflow: hidden; /*그림 영역의 외곽을 숨기기위해서 border-radius 100%와 함께*/
+  	box-sizing: content-box; /* border와 padding 도 폭과 높이에 포함되도록 */
+}
+	.big-profile-picture {
+		margin: 0 auto;		
+		border: 5px solid #50597b;
+		width: 150px;
+		height: 150px;
+	}
+	.small-profile-picture {
+		border: 2px solid #50597b;
+		width: 40px;
+		height: 40px;
+	}
+
+
+/** MAIN CONTAINER **/
+
+.main-container {
+	font-family: 'Ubuntu', sans-serif;
+	width: 950px;
+	height: 1725px;
+	margin: 6em auto;
+}	
+	/*********************************************** HEADER ***********************************************/
+	header {
+		height: 80px;
+	}
+		.header-menu {
+			font-size: 17px;
+			line-height: 80px;
+		}
+			.header-menu li {
+				position: relative; /* static+absolute 속성*/ /* 넘버 5의 위치가 absolute라서 부모에 담으려고 */
+			}
+				.header-menu-tab {
+					padding: 0 27px;
+					display: block;
+					line-height: 74px;
+					font-size: 17px;
+					transition: background .3s;
+				}
+					.header-menu-tab:hover {
+						background: #50597b;
+						border-bottom: 4px solid #11a8ab;
+						text-decoration: none;
+					}
+					.header-menu-tab .icon {
+						padding-right: 15px;
+					}
+				.header-menu-number {
+					position: absolute; /* 부모가 static이면 부모를 기준으로 하지 않는다. relative로.. */
+					line-height: 22px;
+					padding: 0 6px;
+					font-weight: 700;
+					background: #e64c65;
+					border-radius: 100%;
+					top: 15px;
+					right: 2px;
+					transition: all .3s linear; /*모든 속성에 대해 0.3초간 움직임*/
+				}
+					.header-menu li:hover .header-menu-number {
+						text-decoration: none;
+						transform: rotate(360deg);
+					}
+		.profile-menu {
+			float: right; /* 오른쪽에 차곡차곡 넣으려고 */
+			height: 80px;
+			padding-right: 20px;
+		}
+			.profile-menu p {
+				font-size: 17px;
+				display: inline-block; /*inline이면서 위치나 크기를 사용하려고*/
+				line-height: 76px;
+				margin: 0;
+				padding-right: 10px;
+			}
+				.profile-menu a {
+					padding-left: 5px;
+				}
+					.profile-menu a:hover {
+						text-decoration: none;
+					}
+			.small-profile-picture {
+				display: inline-block; /*inline이면서 위치나 크기를 사용하려고*/
+				vertical-align: middle;				
+			}
+	/** CONTAINERS **/
+	.container {
+		float: left;
+		width: 300px;
+	}
+		.block {
+			margin-bottom: 25px;
+			background: #394264;
+			border-radius: 5px;
+		}
